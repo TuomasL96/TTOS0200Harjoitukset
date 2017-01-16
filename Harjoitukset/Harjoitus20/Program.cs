@@ -10,6 +10,7 @@ namespace Harjoitus20
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
