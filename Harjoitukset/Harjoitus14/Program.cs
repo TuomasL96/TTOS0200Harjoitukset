@@ -18,7 +18,7 @@ namespace Harjoitus14
             do
             {
                 Console.Write("Anna arvosana: ");
-                arvosanat = Int32.Parse(Console.ReadLine());
+                arvosanat = int.Parse(Console.ReadLine());
                 switch (arvosanat)
                 {
                     case 0:
