@@ -15,7 +15,7 @@ namespace Harjoitus9
             do
             {
                 Console.Write("Anna Luku: ");
-                luku = Int32.Parse(Console.ReadLine());
+                luku = int.Parse(Console.ReadLine());
                 kokonais = kokonais + luku;
 
             } while (luku != 0);

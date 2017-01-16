@@ -21,7 +21,7 @@ namespace Harjoitus4
             {
                 Console.WriteLine("Aikuinen");
             }
-           if (age > 65)
+            if (age > 65)
             {
                 Console.WriteLine("Seniori");
             }
