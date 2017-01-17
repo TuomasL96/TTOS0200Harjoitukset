@@ -12,7 +12,7 @@ namespace Harjoitus15
         {
             int rivit;
             Console.WriteLine("Anna luku");
-            rivit = Int32.Parse(Console.ReadLine());
+            rivit = int.Parse(Console.ReadLine());
             rivit = rivit - 2;
             for (int i = 0; i < rivit; i++)
             {

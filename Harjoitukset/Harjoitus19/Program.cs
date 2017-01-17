@@ -55,7 +55,6 @@ namespace Harjoitus19
                 {
                     arvaus++;
                 }
-
             } while (toisto == true);
         }
     }

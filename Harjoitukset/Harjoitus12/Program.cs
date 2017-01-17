@@ -14,7 +14,7 @@ namespace Harjoitus12
             for (int i = 0; i < 5; i++)
             {
                 Console.Write("Anna Luku: ");
-                taulu[i] = Int32.Parse(Console.ReadLine());
+                taulu[i] = int.Parse(Console.ReadLine());
             }
             Array.Reverse(taulu);
             Console.Write("Luvut ovat: ");

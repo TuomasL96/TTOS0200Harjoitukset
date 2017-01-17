@@ -14,7 +14,7 @@ namespace Harjoitus13
             for (int i = 0; i < 5; i++)
             {
                 Console.Write("Anna pisteet: ");
-                pisteet[i] = Int32.Parse(Console.ReadLine());
+                pisteet[i] = int.Parse(Console.ReadLine());
             }
             Array.Sort(pisteet);
             int kokonais = pisteet.Sum() - pisteet[0] - pisteet[4];
