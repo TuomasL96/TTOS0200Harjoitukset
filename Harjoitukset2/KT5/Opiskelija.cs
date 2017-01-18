@@ -8,28 +8,28 @@ namespace KT5
 {
     class Opiskelija
     {
-        public string Etunimi { get; set; }
-        public string Sukunimi { get; set; }
-        public string OpiskelijaTunnus { get; set; }
-        public string LuokkaTunnus { get; set; }
-        public int Ika { get; set; }
+        private string etunimi { get; set; }
+        private string sukunimi { get; set; }
+        private string opiskelijaTunnus { get; set; }
+        private string luokkaTunnus { get; set; }
+        private int ika { get; set; }
 
-        public Opiskelija(string eNimi, string sNimi, string opiskelijaT, string luokkaT, int ika)
+        public Opiskelija(string eNimi, string sNimi, string opiskelijaT, string luokkaT, int ikaA)
         {
-            this.Etunimi = eNimi;
-            this.Sukunimi = sNimi;
-            this.OpiskelijaTunnus = opiskelijaT;
-            this.LuokkaTunnus = luokkaT;
-            this.Ika = ika;
+            this.etunimi = eNimi;
+            this.sukunimi = sNimi;
+            this.opiskelijaTunnus = opiskelijaT;
+            this.luokkaTunnus = luokkaT;
+            this.ika = ikaA;
         }
 
         public void PrintData()
         {
-            Console.WriteLine("Etunimi: " + Etunimi);
-            Console.WriteLine("Sukunimi: " + Sukunimi);
-            Console.WriteLine("Opiskelijatunnus: " + OpiskelijaTunnus);
-            Console.WriteLine("Luokkatunnus: " + LuokkaTunnus);
-            Console.WriteLine("Ika: " + Ika);
+            Console.WriteLine("Etunimi: " + etunimi);
+            Console.WriteLine("Sukunimi: " + sukunimi);
+            Console.WriteLine("Opiskelijatunnus: " + opiskelijaTunnus);
+            Console.WriteLine("Luokkatunnus: " + luokkaTunnus);
+            Console.WriteLine("Ika: " + ika);
             Console.WriteLine("*******************************");
         }
        
