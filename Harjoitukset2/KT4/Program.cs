@@ -16,6 +16,7 @@ namespace KT4
         static void VehicleTesti()
         {
             while (true)
+            {
                 Vehicle munAuto = new Vehicle();
 
                 Console.WriteLine("Anna auton nimi");
