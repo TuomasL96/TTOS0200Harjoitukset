@@ -15,8 +15,7 @@ namespace KT4
         }
         static void VehicleTesti()
         {
-            while (true)// tee tänne switch case valikko
-            {
+            while (true)
                 Vehicle munAuto = new Vehicle();
 
                 Console.WriteLine("Anna auton nimi");

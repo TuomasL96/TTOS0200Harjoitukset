@@ -40,7 +40,7 @@ namespace KT6
             else
             {
                 Strobe = false;
-                Väri = "musta";
+                Väri = "Valot eivät ole päällä!";
                 Kirkkaus = 0;
             }
         }
