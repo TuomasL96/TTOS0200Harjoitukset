@@ -9,11 +9,11 @@ namespace KT4
 {
     class Vehicle
     {
-        //prop
+       
         public string Name { get; set; }
         public int Speed { get; set; }
         public int Tyres { get; set; }
-        //methods
+       
         public void PrintData()
         {
             Console.WriteLine("Auton nimi: " + Name);
