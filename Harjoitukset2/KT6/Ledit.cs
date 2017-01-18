@@ -33,15 +33,15 @@ namespace KT6
             OnOff = onoff;
             if (OnOff == true)
             {
-                Strobe = strobe;
-                Väri = väri;
-                Kirkkaus = kirkkaus;
+                this.Strobe = strobe;
+                this.Väri = väri;
+                this.Kirkkaus = kirkkaus;
             }
             else
             {
-                Strobe = false;
-                Väri = "Valot eivät ole päällä!";
-                Kirkkaus = 0;
+                this.Strobe = false;
+                this.Väri = "Valot eivät ole päällä!";
+                this.Kirkkaus = 0;
             }
         }
     }

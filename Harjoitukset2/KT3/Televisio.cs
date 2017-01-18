@@ -30,13 +30,13 @@ namespace KT3
             OnOff = paalla;
             if (OnOff == true)
             {
-                Kanava = kanava;
-                ÄänenVoimakkuus = ääni;
+                this.Kanava = kanava;
+                this.ÄänenVoimakkuus = ääni;
             }
             else
             {
-                Kanava = 0;
-                ÄänenVoimakkuus = 0;
+                this.Kanava = 0;
+                this.ÄänenVoimakkuus = 0;
             }
         }
 

@@ -17,8 +17,8 @@ namespace KT2
             OnOff = paalla;
             if (OnOff == true)
             {
-                Pesuaika = aika;
-                PesuTyyli = tyyli;
+                this.Pesuaika = aika;
+                this.PesuTyyli = tyyli;
             }
         }
     }
