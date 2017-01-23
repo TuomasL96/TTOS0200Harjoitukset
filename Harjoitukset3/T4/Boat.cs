@@ -15,8 +15,8 @@ namespace T4
         public Boat(string nimi, string model, int year, string color, int seatcount, string boattype)
             : base(nimi, model, year, color)
         {
-            this.SeatCount = seatcount;
-            this.BoatType = boattype;
+            SeatCount = seatcount;
+            BoatType = boattype;
         }    
 
         public override string ToString()

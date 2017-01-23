@@ -15,9 +15,9 @@ namespace T3
 
         public Employee(string name, string profession, int salary)
         {
-            this.Name = name;
-            this.Profession = profession;
-            this.Salary = salary;
+            Name = name;
+            Profession = profession;
+            Salary = salary;
         }
         public override string ToString()
         {

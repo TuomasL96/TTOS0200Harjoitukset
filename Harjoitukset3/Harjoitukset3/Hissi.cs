@@ -28,7 +28,7 @@ namespace Harjoitukset3
                 }
                 else
                 {
-                    this.floor = value;
+                    floor = value;
                     tila = "Elevator is now in floor: " + floor;
                 }
             }

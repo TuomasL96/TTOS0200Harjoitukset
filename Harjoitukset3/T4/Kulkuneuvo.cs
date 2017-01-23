@@ -16,10 +16,10 @@ namespace T4
 
         public Kulkuneuvo(string name, string model, int year, string color)
         {
-            this.Name = name;
-            this.Model = model;
-            this.Color = color;
-            this.Year = year;
+            Name = name;
+            Model = model;
+            Color = color;
+            Year = year;
         }
 
         public override string ToString()

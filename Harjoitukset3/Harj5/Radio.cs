@@ -20,9 +20,9 @@ namespace T5
 
         public Radio()
         {
-            this.Päällä = false;
-            this.ääni = minÄäni;
-            this.taajuus = minTaajuus;
+            Päällä = false;
+            ääni = minÄäni;
+            taajuus = minTaajuus;
         }
         public int Ääni
         {
@@ -31,16 +31,16 @@ namespace T5
             {
                 if (Päällä == false)
                 {
-                    this.tulostus = "Radio ei ole päällä, äänenvoimakkuutta ei voi säätää!";
+                    tulostus = "Radio ei ole päällä, äänenvoimakkuutta ei voi säätää!";
                 }
                 if (Päällä == true && value > minÄäni && value < maxÄäni)
                 {
-                    this.ääni = value;
-                    this.tulostus = "Äänenvoimakkuus on nyt:" + value;
+                    ääni = value;
+                    tulostus = "Äänenvoimakkuus on nyt:" + value;
                 }
                 if (Päällä == true && !(value > minÄäni && value < maxÄäni))
                 {
-                    this.tulostus = "Alle arvoa " + minÄäni + " tai yli " + maxÄäni + " ei voi asettaa";
+                    tulostus = "Alle arvoa " + minÄäni + " tai yli " + maxÄäni + " ei voi asettaa";
                 }
             }
         }
@@ -52,16 +52,16 @@ namespace T5
             {
                 if (Päällä == false)
                 {
-                    this.tulostus = "Radio ei ole päällä, taajuutta ei voi säätää!";
+                    tulostus = "Radio ei ole päällä, taajuutta ei voi säätää!";
                 }
                 if (Päällä == true && value > minTaajuus && value < maxTaajuus)
                 {
-                    this.taajuus = value;
-                    this.tulostus = "Taajuutesi on nyt:" + value;
+                    taajuus = value;
+                    tulostus = "Taajuutesi on nyt:" + value;
                 }
                 if (Päällä == true && !(value > minTaajuus && value < maxTaajuus))
                 {
-                    this.tulostus = "Alle arvoa " + minTaajuus + " tai yli " + maxTaajuus + " ei voi asettaa:";
+                    tulostus = "Alle arvoa " + minTaajuus + " tai yli " + maxTaajuus + " ei voi asettaa:";
                 }
             }
         }

@@ -15,15 +15,15 @@ namespace T4
         public Bike(string nimi, string model, int year, string color, bool gearwheels, string gearmodel)
             : base(nimi, model, year, color)
         {
-            this.GearWheels = gearwheels;
-            this.GearModel = gearmodel;
+            GearWheels = gearwheels;
+            GearModel = gearmodel;
         }
 
         public Bike(string nimi, string model, int year, string color, bool gearwheels)
             : base(nimi, model, year, color)
         {
-            this.GearWheels = gearwheels;
-            this.GearModel = "";
+            GearWheels = gearwheels;
+            GearModel = "";
         }
 
         public string GearModel

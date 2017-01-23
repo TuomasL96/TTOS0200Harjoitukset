@@ -15,8 +15,8 @@ namespace T3
         public Boss(string name, string profession, int salary, string car, int bonus)
             :base(name, profession, salary)
         {
-            this.Car = car;
-            this.Bonus = bonus;
+            Car = car;
+            Bonus = bonus;
         }
         public override string ToString()
         {
