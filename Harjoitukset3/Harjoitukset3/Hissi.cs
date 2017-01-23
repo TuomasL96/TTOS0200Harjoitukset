@@ -8,27 +8,34 @@ namespace Harjoitukset3
 {
     class Hissi
     {
-        public int CurrentFloor { get; set; }
-        private int wantedFloor { get; set; }
-        public string Tila { get; set; }
-        public int WantedFloor
+        private const int max = 5;
+        private const int min = 1;
+        private int floor = 1;
+        private string tila;
+
+        public int Floor
         {
-            get
-            {
-                return wantedFloor;
-            }
+            get { return floor; }
             set
             {
-                if (value >= 1 || value <= 5 )
+                if (value < min)
                 {
-                    this.WurrentFloor = value;
-                    Tila = "Elevator is now in floor: " + CurrentFloor;
+                    tila = "Floor is too small!";
+                }
+                else if (value > max)
+                {
+                    tila = "Floor is too big!";
                 }
                 else
                 {
-                    Tila = "Floor number must be a value 1-5";
+                    this.floor = value;
+                    tila = "Elevator is now in floor: " + floor;
                 }
             }
+        }
+        public string Tila
+        {
+            get { return tila; }
         }
     }
 }

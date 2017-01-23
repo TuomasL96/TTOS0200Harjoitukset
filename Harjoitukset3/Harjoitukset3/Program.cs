@@ -15,12 +15,13 @@ namespace Harjoitukset3
         }
         static void TestaaHissi()
         {
-            Hissi hissiA = new Hissi();
+            Hissi hissi = new Hissi();
+            Console.WriteLine("Elevator is now in floor: " + hissi.Floor);
             while (true)
             {
-                Console.WriteLine("Elevator is now in floor: " + hissiA.CurrentFloor);
                 Console.Write("Give a new floor number (1-5): ");
-                hissiA.WantedFloor = int.Parse(Console.ReadLine());
+                hissi.Floor = int.Parse(Console.ReadLine());
+                Console.WriteLine(hissi.Tila);
             }
         }
     }
