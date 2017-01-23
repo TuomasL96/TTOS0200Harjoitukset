@@ -33,12 +33,12 @@ namespace T5
                 {
                     tulostus = "Radio ei ole päällä, äänenvoimakkuutta ei voi säätää!";
                 }
-                if (Päällä == true && value > minÄäni && value < maxÄäni)
+                if (Päällä == true && value >= minÄäni && value <= maxÄäni)
                 {
                     ääni = value;
                     tulostus = "Äänenvoimakkuus on nyt:" + value;
                 }
-                if (Päällä == true && !(value > minÄäni && value < maxÄäni))
+                if (Päällä == true && !(value >= minÄäni && value <= maxÄäni))
                 {
                     tulostus = "Alle arvoa " + minÄäni + " tai yli " + maxÄäni + " ei voi asettaa";
                 }
@@ -54,12 +54,12 @@ namespace T5
                 {
                     tulostus = "Radio ei ole päällä, taajuutta ei voi säätää!";
                 }
-                if (Päällä == true && value > minTaajuus && value < maxTaajuus)
+                if (Päällä == true && value >= minTaajuus && value <= maxTaajuus)
                 {
                     taajuus = value;
                     tulostus = "Taajuutesi on nyt:" + value;
                 }
-                if (Päällä == true && !(value > minTaajuus && value < maxTaajuus))
+                if (Päällä == true && !(value >= minTaajuus && value <= maxTaajuus))
                 {
                     tulostus = "Alle arvoa " + minTaajuus + " tai yli " + maxTaajuus + " ei voi asettaa:";
                 }
