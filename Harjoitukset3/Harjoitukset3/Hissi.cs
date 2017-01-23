@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Harjoitukset3
+namespace T1
 {
     class Hissi
     {

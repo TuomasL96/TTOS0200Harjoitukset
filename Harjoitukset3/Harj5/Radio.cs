@@ -36,7 +36,7 @@ namespace T5
                 if (Päällä == true && value >= minÄäni && value <= maxÄäni)
                 {
                     ääni = value;
-                    tulostus = "Äänenvoimakkuus on nyt:" + value;
+                    tulostus = "Äänenvoimakkuus on nyt:" + string.Format((value).ToString("F1"));
                 }
                 if (Päällä == true && !(value >= minÄäni && value <= maxÄäni))
                 {
@@ -57,7 +57,7 @@ namespace T5
                 if (Päällä == true && value >= minTaajuus && value <= maxTaajuus)
                 {
                     taajuus = value;
-                    tulostus = "Taajuutesi on nyt:" + value;
+                    tulostus = "Taajuutesi on nyt:" + string.Format((value).ToString("F1"));
                 }
                 if (Päällä == true && !(value >= minTaajuus && value <= maxTaajuus))
                 {

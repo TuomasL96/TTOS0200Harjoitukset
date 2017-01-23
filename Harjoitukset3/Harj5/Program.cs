@@ -18,7 +18,7 @@ namespace T5
             Radio radio = new Radio();
             while (true)
             {
-                Console.WriteLine("\nRadion tiedot: \nPäällä: " + radio.Päällä + " Äänenvoimakkuus: " + radio.Ääni + " Taajuus: " + Math.Round(radio.Taajuus, 1));
+                Console.WriteLine("\nRadion tiedot: \nPäällä: " + radio.Päällä + " Äänenvoimakkuus: " + radio.Ääni + " Taajuus: " + string.Format((radio.Taajuus).ToString("F1")));
                 Console.WriteLine("1. Sammuta/laita radio päälle\n2. Vaihda taajuutta\n3. Vaihda Äänenvoimakkuutta");
                 int valikko = int.Parse(Console.ReadLine());
                 switch (valikko)

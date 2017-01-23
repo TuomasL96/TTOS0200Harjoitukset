@@ -31,14 +31,8 @@ namespace T4
             get { return gearmodel; }
             set
             {
-                if (GearWheels == true)
-                {
-                    gearmodel = value;
-                }
-                else
-                {
-                    gearmodel = "";
-                }
+                if (GearWheels == true) { gearmodel = value; }
+                else { gearmodel = ""; }
             }
         }
     
