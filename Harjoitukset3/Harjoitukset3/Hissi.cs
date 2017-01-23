@@ -21,12 +21,12 @@ namespace Harjoitukset3
             {
                 if (value >= 1 || value <= 5 )
                 {
-                    this.CurrentFloor = WantedFloor;
-                    this.Tila = "Elevator is now in floor: " + CurrentFloor;
+                    this.WurrentFloor = value;
+                    Tila = "Elevator is now in floor: " + CurrentFloor;
                 }
                 else
                 {
-                    this.Tila = "Floor number must be a value 1-5";
+                    Tila = "Floor number must be a value 1-5";
                 }
             }
         }

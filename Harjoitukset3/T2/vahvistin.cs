@@ -6,28 +6,38 @@ using System.Threading.Tasks;
 
 namespace T2
 {
-    class vahvistin
+    class Vahvistin
     {
-        private int maxVoimakkuus = 100;
-        private int minVoimakkuus = 0;
+        private const int max = 100;
+        private const int min = 0;
         private int voimakkuus;
-        public string Tulostus;
+        private string tulostus;
 
         public int Voimakkuus
         {
             get { return voimakkuus; }
             set
             {
-                voimakkuus = value;
-                if (voimakkuus > maxVoimakkuus)
+                if (value > max)
                 {
-                    voimakkuus = 100;
-                    Tulostus = "Too much volume -  Amplifier volume is set to maximum : 100";
+                    voimakkuus = max;
+                    tulostus = "Too much volume -  Amplifier volume is set to maximum : 100";
+                }
+                if (value < min)
+                {
+                    voimakkuus = min;
+                    tulostus = "Too low volume -  Amplifier volume is set to minimum : 0";
+                }
+                if (value < max && value > min)
+                {
+                    voimakkuus = value;
+                    tulostus = "Amplifier volume is set to : " + value;
                 }
             }
-        }  
-
-
-        
+        }
+        public string Tulostus
+        {
+            get { return tulostus; }
+        }
     }
 }

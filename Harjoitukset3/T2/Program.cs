@@ -15,7 +15,13 @@ namespace T2
         }
         static void ÄänenVoima()
         {
-            
+            Vahvistin vahv = new Vahvistin();
+            while (true)
+            {
+                Console.Write("Give a new volume value (0-100) > ");
+                vahv.Voimakkuus = int.Parse(Console.ReadLine());
+                Console.WriteLine(vahv.Tulostus);
+            }
         }
     }
 }
