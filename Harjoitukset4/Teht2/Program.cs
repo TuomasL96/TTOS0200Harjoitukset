@@ -23,7 +23,7 @@ namespace Teht2
             Console.WriteLine(jääkaappi.ToString());
             for (int i = 0; i < jääkaappi.tuotteet.Count; i++)
             {
-                Console.WriteLine("Tuote: {0}, vanhenee: {1}", jääkaappi.tuotteet[i].Nimi,jääkaappi.tuotteet[i].Päiväys);
+                Console.WriteLine("Tuote " + i +".- {0}, vanhenee: {1}",jääkaappi.tuotteet[i].Nimi,jääkaappi.tuotteet[i].Päiväys);
             }
             // jääkaapin testailua
             while (toisto == true)
@@ -43,15 +43,14 @@ namespace Teht2
                         jääkaappi.LisääTuote(new Tuote(nimi,päiväys));
                         break;
                     case 2:
-                        Console.Write("Anna tuotteen nimi: ");
-                        string pnimi = Console.ReadLine();
-                        jääkaappi.PoistaTuote(tuotteet.IndexOf(pnimi));
+                        Console.Write("Anna tuotteen indeksi: ");
+                        jääkaappi.tuotteet.RemoveAt(int.Parse(Console.ReadLine()));
                         break;
                     case 3:
                         Console.WriteLine(jääkaappi.ToString());
                         for (int i = 0; i < jääkaappi.tuotteet.Count; i++)
                         {
-                            Console.WriteLine("Tuote: {0}, Päiväys:{1}", jääkaappi.tuotteet[i].Nimi, jääkaappi.tuotteet[i].Päiväys);
+                            Console.WriteLine("Tuote " + i + ".- {0}, vanhenee: {1}", jääkaappi.tuotteet[i].Nimi, jääkaappi.tuotteet[i].Päiväys);
                         }
                         break;
                 }

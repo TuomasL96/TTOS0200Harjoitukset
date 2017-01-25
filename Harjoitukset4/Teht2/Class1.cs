@@ -18,10 +18,6 @@ namespace Teht2
         {
             tuotteet.Add(tuote);
         }
-        public void PoistaTuote(int indexi)
-        {
-            tuotteet.RemoveAt(indexi);
-        }
         public override string ToString()
         {
             return "Jääkaappi mallia " + Nimi + " sisältää:";
