@@ -23,9 +23,10 @@ namespace Harjoitukset5
             Kappaleet.AddSong(song4);
             Kappaleet.AddSong(song5);
             Kappaleet.AddSong(song6);
-            foreach (var item in Kappaleet.)
+            Console.WriteLine();
+            foreach (var item in Kappaleet.PrintSongs)
             {
-
+                Console.WriteLine()
             }
         }
     }
