@@ -43,8 +43,11 @@ namespace Teht2
                         jääkaappi.LisääTuote(new Tuote(nimi,päiväys));
                         break;
                     case 2:
-                        Console.Write("Anna tuotteen indeksi: ");
-                        jääkaappi.tuotteet.RemoveAt(int.Parse(Console.ReadLine()));
+                        Console.Write("Anna tuotteen nimi: ");
+                        nimi = Console.ReadLine();
+                        Console.Write("Päiväys: ");
+                        päiväys = Console.ReadLine();
+                        jääkaappi.PoistaTuote(new Tuote(nimi,päiväys));
                         break;
                     case 3:
                         Console.WriteLine(jääkaappi.ToString());
