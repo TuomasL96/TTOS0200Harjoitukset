@@ -12,19 +12,23 @@ namespace Teht2
         {
             bool toisto = true;
             string nimi;
-            int maara;
+            string päiväys;
             List<string> tuotteet = new List<string>();
             Jääkaappi jääkaappi = new Jääkaappi("Electrolux");
+
+            jääkaappi.LisääTuote(new Tuote("Makkara", "13.2.2017"));
+            jääkaappi.LisääTuote(new Tuote("Juusto", "02.2.2017"));
+            jääkaappi.LisääTuote(new Tuote("Maitotölkki", "13.1.2017"));
 
             Console.WriteLine(jääkaappi.ToString());
             for (int i = 0; i < jääkaappi.tuotteet.Count; i++)
             {
-                Console.WriteLine("Tuotetta {0} on {1} kpl", jääkaappi.tuotteet[i].Nimi,jääkaappi.tuotteet[i].Määrä);
+                Console.WriteLine("Tuote: {0}, vanhenee: {1}", jääkaappi.tuotteet[i].Nimi,jääkaappi.tuotteet[i].Päiväys);
             }
             // jääkaapin testailua
             while (toisto == true)
             {
-                Console.WriteLine("\n0. lopeta, 1. Lisää tuote, 2. Poista tuote, 3. Tarkista tuotteet kaapissa");
+                Console.WriteLine("\n0. lopeta, 1. Lisää tuote, 2. Poista tuote, 3. Tarkista tuotteet kaapissa"); // tuotteen poisto ei toimi
                 int valinta = int.Parse(Console.ReadLine());
                 switch (valinta)
                 {
@@ -34,22 +38,20 @@ namespace Teht2
                     case 1:
                         Console.Write("Anna tuotteen nimi: ");
                         nimi = Console.ReadLine();
-                        Console.Write("Määrä: ");
-                        maara = int.Parse(Console.ReadLine());
-                        jääkaappi.LisääTuote(new Tuote(nimi,maara));
+                        Console.Write("Päiväys: ");
+                        päiväys = Console.ReadLine();
+                        jääkaappi.LisääTuote(new Tuote(nimi,päiväys));
                         break;
                     case 2:
                         Console.Write("Anna tuotteen nimi: ");
                         string pnimi = Console.ReadLine();
-                        Console.Write("Määrä: ");
-                        maara = int.Parse(Console.ReadLine());
-                        jääkaappi.PoistaTuote(maara);
+                        jääkaappi.PoistaTuote(tuotteet.IndexOf(pnimi));
                         break;
                     case 3:
                         Console.WriteLine(jääkaappi.ToString());
                         for (int i = 0; i < jääkaappi.tuotteet.Count; i++)
                         {
-                            Console.WriteLine("Tuotetta {0} on {1} kpl", jääkaappi.tuotteet[i].Nimi, jääkaappi.tuotteet[i].Määrä);
+                            Console.WriteLine("Tuote: {0}, Päiväys:{1}", jääkaappi.tuotteet[i].Nimi, jääkaappi.tuotteet[i].Päiväys);
                         }
                         break;
                 }

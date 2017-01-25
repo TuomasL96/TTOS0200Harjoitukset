@@ -18,9 +18,9 @@ namespace Teht2
         {
             tuotteet.Add(tuote);
         }
-        public void PoistaTuote(int maara)
+        public void PoistaTuote(int indexi)
         {
-            
+            tuotteet.RemoveAt(indexi);
         }
         public override string ToString()
         {
@@ -30,15 +30,11 @@ namespace Teht2
     class Tuote
     {
         public string Nimi { get; set; }
-        public int Määrä { get; set; }
-        public Tuote(string nimi, int määrä)
+        public string Päiväys { get; set; }
+        public Tuote(string nimi, string päiväys)
         {
             Nimi = nimi;
-            Määrä = määrä;
-        }
-        public void MaaranMuutos(int maara)
-        {
-            Määrä = Määrä - maara;
+            Päiväys = päiväys;
         }
     }
 }
