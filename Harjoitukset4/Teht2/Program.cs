@@ -16,12 +16,6 @@ namespace Teht2
             List<string> tuotteet = new List<string>();
             Jääkaappi jääkaappi = new Jääkaappi("Electrolux");
 
-            jääkaappi.LisääTuote(new Tuote("Maitotölkki", 2));
-            jääkaappi.LisääTuote(new Tuote("Margariini", 1));
-            jääkaappi.LisääTuote(new Tuote("Kurkku", 1));
-            jääkaappi.LisääTuote(new Tuote("Ketsuppi", 1));
-            jääkaappi.LisääTuote(new Tuote("Sinappi", 1));
-
             Console.WriteLine(jääkaappi.ToString());
             for (int i = 0; i < jääkaappi.tuotteet.Count; i++)
             {
@@ -46,10 +40,10 @@ namespace Teht2
                         break;
                     case 2:
                         Console.Write("Anna tuotteen nimi: ");
-                        nimi = Console.ReadLine();
+                        string pnimi = Console.ReadLine();
                         Console.Write("Määrä: ");
                         maara = int.Parse(Console.ReadLine());
-                        jääkaappi.PoistaTuote(new Tuote(nimi, maara));
+                        jääkaappi.PoistaTuote(maara);
                         break;
                     case 3:
                         Console.WriteLine(jääkaappi.ToString());

@@ -24,7 +24,7 @@ namespace Teht1
 
             for (int i = 0; i < porsche.RengasMaara; i++)
             {
-                Console.WriteLine("-Name " + porsche.Renkaat[i].malli + " Model: " + porsche.Renkaat[i].malli + " Tyre Size: " + porsche.Renkaat[i].koko);
+                Console.WriteLine("-Name " + porsche.Renkaat[i].Malli + " Model: " + porsche.Renkaat[i].Malli + " Tyre Size: " + porsche.Renkaat[i].Koko);
             }
 
             Console.WriteLine("\n");
@@ -38,7 +38,7 @@ namespace Teht1
             Console.WriteLine(ducati.ToString() + "\nTyres:");
             for (int i = 0; i < ducati.RengasMaara; i++)
             {
-                Console.WriteLine("-Name " + ducati.Renkaat[i].malli + " Model: " + ducati.Renkaat[i].malli + " Tyre Size: " + ducati.Renkaat[i].koko);
+                Console.WriteLine("-Name " + ducati.Renkaat[i].Malli + " Model: " + ducati.Renkaat[i].Malli + " Tyre Size: " + ducati.Renkaat[i].Koko);
             }  
         }
     }

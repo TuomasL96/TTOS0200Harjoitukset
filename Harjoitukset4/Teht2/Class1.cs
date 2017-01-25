@@ -16,17 +16,11 @@ namespace Teht2
         }
         public void LisääTuote(Tuote tuote)
         {
-            if (!(tuotteet.Contains(new Tuote(tuote.Nimi, tuote.Määrä)) && tuote.Määrä > 0));
-            {
-                tuotteet.Add(tuote);
-            }
+            tuotteet.Add(tuote);
         }
-        public void PoistaTuote(Tuote tuote)
+        public void PoistaTuote(int maara)
         {
-            if (tuotteet.Contains(tuote) && tuote.Määrä > 0)
-            {
-                tuotteet.Remove(tuote);
-            }
+            
         }
         public override string ToString()
         {
@@ -42,9 +36,9 @@ namespace Teht2
             Nimi = nimi;
             Määrä = määrä;
         }
-        public override bool Equals(Tuote tuot)
+        public void MaaranMuutos(int maara)
         {
-            if this.Nimi == other.nimi
+            Määrä = Määrä - maara;
         }
     }
 }

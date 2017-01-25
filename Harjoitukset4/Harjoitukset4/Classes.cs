@@ -38,15 +38,15 @@ namespace Teht1
     }
     class Rengas
     {
-        public string malli { get; set; }
-        public string tyyppi { get; set; }
-        public string koko { get; set; }
+        public string Malli { get; set; }
+        public string Tyyppi { get; set; }
+        public string Koko { get; set; }
 
-        public Rengas(string Malli, string Typpi, string Koko)
+        public Rengas(string malli, string tyyppi, string koko)
         {
-            malli = Malli;
-            tyyppi = tyyppi;
-            koko = Koko;
+            Malli = malli;
+            Tyyppi = tyyppi;
+            Koko = koko;
         }
     }
 }
