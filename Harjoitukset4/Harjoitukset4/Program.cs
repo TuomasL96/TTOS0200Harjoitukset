@@ -10,9 +10,36 @@ namespace Teht1
     {
         static void Main(string[] args)
         {
-            Vehicle vehicle1 = new Vehicle("Porsce", "model911", 4);
-            vehicle1.AddTyres();
-            
+            Kulkuneuvo porsche = new Kulkuneuvo("Porsche", "911", 4);
+            Kulkuneuvo ducati = new Kulkuneuvo("Ducati", "Diavel", 2);
+            Console.WriteLine("Created a new vehicle {0} model {1}", porsche.Nimi, porsche.Malli);
+
+            for (int i = 0; i < porsche.RengasMaara; i++)
+            {
+                porsche.AddRengas("Nokia", "Hakkapeliitta", "205R16");
+                
+            }
+
+            Console.WriteLine(porsche.ToString() + "\nTyres:");
+
+            for (int i = 0; i < porsche.RengasMaara; i++)
+            {
+                Console.WriteLine("-Name " + porsche.Renkaat[i].malli + " Model: " + porsche.Renkaat[i].malli + " Tyre Size: " + porsche.Renkaat[i].koko);
+            }
+
+            Console.WriteLine("\n");
+            Console.WriteLine("Created a new vehicle {0} model {1}", ducati.Nimi, ducati.Malli);
+
+            for (int i = 0; i < ducati.RengasMaara; i++)
+            {
+                ducati.AddRengas("MIC", "Pilot", "160R17");
+            }
+
+            Console.WriteLine(ducati.ToString() + "\nTyres:");
+            for (int i = 0; i < ducati.RengasMaara; i++)
+            {
+                Console.WriteLine("-Name " + ducati.Renkaat[i].malli + " Model: " + ducati.Renkaat[i].malli + " Tyre Size: " + ducati.Renkaat[i].koko);
+            }  
         }
     }
 }
