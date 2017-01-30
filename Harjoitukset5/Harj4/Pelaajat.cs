@@ -16,12 +16,8 @@ namespace Harj4
             string player = name + ", " + lenght + " , " + age + " , " + playerId;
             Players.Add(player);
         }
-        public void RemovePlayer(int playerId)
+        public List<Player> RemovePlayer(int playerId)
         {//ei valmis
-        }
-        public string GetPlayers()
-        {
-
         }
         public Team(string name, string town)
         {
