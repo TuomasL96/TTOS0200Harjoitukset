@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitukset5", "Harjoitukset5\Harjoitukset5.csproj", "{E2F85A55-86C0-4D39-94D2-CC161217EACD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harj2", "Harjoitukset5\Harj2.csproj", "{E2F85A55-86C0-4D39-94D2-CC161217EACD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "harj1", "harj1\harj1.csproj", "{649A8F3F-6545-4418-B832-CFCB4A9D5D08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harj3", "Harj3\Harj3.csproj", "{6FB7D72B-1701-4350-9225-DAFA80F29011}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harj4", "Harj4\Harj4.csproj", "{2C00942F-0186-4B40-91AD-9319236BB456}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{649A8F3F-6545-4418-B832-CFCB4A9D5D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{649A8F3F-6545-4418-B832-CFCB4A9D5D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{649A8F3F-6545-4418-B832-CFCB4A9D5D08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FB7D72B-1701-4350-9225-DAFA80F29011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FB7D72B-1701-4350-9225-DAFA80F29011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FB7D72B-1701-4350-9225-DAFA80F29011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FB7D72B-1701-4350-9225-DAFA80F29011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C00942F-0186-4B40-91AD-9319236BB456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C00942F-0186-4B40-91AD-9319236BB456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C00942F-0186-4B40-91AD-9319236BB456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C00942F-0186-4B40-91AD-9319236BB456}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
