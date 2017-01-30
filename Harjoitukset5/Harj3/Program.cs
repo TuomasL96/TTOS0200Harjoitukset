@@ -23,7 +23,7 @@ namespace Harj3
 
             for (int i = 0; i < cards.Deck.Count; i++)
             {
-                Console.WriteLine((i + 1) + " kortti on " + cards.Deck[i].ToString());
+                Console.WriteLine( (i+1) + " kortti on " + cards.Deck[i].ToString());
             }
         }
     }

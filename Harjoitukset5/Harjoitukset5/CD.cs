@@ -24,7 +24,7 @@ namespace Harjoitukset5
             Songs.Add(song);
         }
 
-        public string PrintSongs()
+        private string PrintSongs()
         {
             string print = "";
             for (int i = 0; i < Songs.Count; i++)
