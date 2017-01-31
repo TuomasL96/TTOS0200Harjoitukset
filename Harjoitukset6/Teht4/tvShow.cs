@@ -7,15 +7,6 @@ using System.Threading.Tasks;
 namespace Teht4
 {
     [Serializable]
-    class TvShows
-    {
-        List<TvShow> tvShows = new List<TvShow>();
-        public string AddShow(TvShow)
-        {
-            return TvShow;
-        }
-    }
-    [Serializable]
     class TvShow
     {
         public string Name { get; set; }

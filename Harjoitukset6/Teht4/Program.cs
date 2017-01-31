@@ -23,14 +23,18 @@ namespace Teht4
             tvShows.Add(new TvShow("Hieno ohjelma", 5, "15:00", "16:00", "jujujujuujujjujuju"));
             tvShows.Add(new TvShow("Muumit", 2, "18:00", "19:00", "ummumumumumumumumum"));
 
-            Stream writeStream = new FileStream("TVShows.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            Stream writeMultipleStream = new FileStream("TVShows.bin", FileMode.Create, FileAccess.Write, FileShare.None);
             IFormatter formatter = new BinaryFormatter();
-            formatter.Serialize(writeStream, tvShows);
-            writeStream.Close();
+            formatter.Serialize(writeMultipleStream, tvShows);
+            writeMultipleStream.Close();
 
-            Stream readStream = new FileStream("TVShows.bin", FileMode.Open, FileAccess.Read, FileShare.None);
-            TvShow readtvShow = (TvShow)formatter.Deserialize(readStream);
-            Console.WriteLine("TVShow: {0} {1}", TvShow.Name);
+            Stream openStream = new FileStream("TVShows.bin", FileMode.Open, FileAccess.Read, FileShare.None);
+            List<TvShow> readTvShows = (List<TvShow>)formatter.Deserialize(openStream);
+            openStream.Close();
+            foreach (TvShow t in tvShows)
+            {
+                Console.WriteLine(t.Name + ", ch: " + t.Channel + ", starts: " + t.StartTime + ", ends:" + t.EndTime + ", INFO: " + t.InfoText);
+            }
         }
     }
 }
