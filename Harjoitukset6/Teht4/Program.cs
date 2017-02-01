@@ -35,14 +35,14 @@ namespace Teht4
                 Stream openStream = new FileStream("TVShows.bin", FileMode.Open, FileAccess.Read, FileShare.None);
                 List<TvShow> readTvShows = (List<TvShow>)formatter.Deserialize(openStream);
                 openStream.Close();
+                foreach (TvShow t in readTvShows)
+                {
+                    Console.WriteLine(t.PrintShow() + "\n===========================");
+                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-            }
-            foreach (TvShow tvshow in tvShows)
-            {
-                Console.WriteLine(tvshow.PrintShow() + "\n===========================");
             }
         }
     }
