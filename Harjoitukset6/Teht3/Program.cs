@@ -68,7 +68,7 @@ namespace Teht3
             }
         }
         /// <summary>
-        ///  tämä versio avaa ja tallentaa tiedoston perään yksi numero kerrallaan 
+        ///  tämä versio avaa ja kirjoittaa tiedoston perään yksi numero kerrallaan 
         /// </summary>
         static void MakeAFile() 
         {
