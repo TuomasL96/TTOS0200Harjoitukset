@@ -22,7 +22,7 @@ namespace Teht2
                 {
                     List<string> lines = new List<string>(File.ReadAllLines(myFile));
                     lines.Sort();
-                    var groupedList = lines.GroupBy(x => x) //LINQ juttuja syntaxi varmaan väärä?
+                    var groupedList = lines.GroupBy(x => x) //LINQ 
                                         .Select(g => new { Value = g.Key, Count = g.Count() });
                     Console.WriteLine("Löytyi " + lines.Count + " riviä, ja " + groupedList.Count() + " nimeä sortattuna:");
                     foreach (var x in groupedList)

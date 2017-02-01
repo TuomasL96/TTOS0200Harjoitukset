@@ -16,8 +16,8 @@ namespace Harjoitukset6
         static void TextWriter()
         {
             string endLine;
+            string myFile = @"d:\temp\testfile.txt";
             bool repeat = true;
-            string file = @"d:\temp\testfile.txt";
 
             while (repeat == true)
             {
@@ -28,7 +28,7 @@ namespace Harjoitukset6
                 {
                     try
                     {
-                        using (StreamWriter writer = new StreamWriter(file, true))
+                        using (StreamWriter writer = new StreamWriter(myFile, true))
                         {
                             writer.WriteLine(endLine);
                         }
@@ -39,10 +39,10 @@ namespace Harjoitukset6
                     }
                 }
             }
-            Console.WriteLine("\nContents of " + file + ":");
+            Console.WriteLine("\nContents of " + myFile + ":");
             try
             {
-                List<string> lines = new List<string>(File.ReadAllLines(file));
+                List<string> lines = new List<string>(File.ReadAllLines(myFile));
                 foreach (string line in lines)
                 {
                     Console.WriteLine(line);
