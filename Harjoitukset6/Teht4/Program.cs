@@ -23,7 +23,7 @@ namespace Teht4
             tvShows.Add(new TvShow("Suomen huutokauppakeisari", 5, "9:30", "10:30", "alalalalalalala"));
             tvShows.Add(new TvShow("Hieno ohjelma", 5, "15:00", "16:00", "jujujujuujujjujuju"));
             tvShows.Add(new TvShow("Muumit", 2, "18:00", "19:00", "ummumumumumumumumum"));
-            tvShows.Add(new TvShow("Testi", 99, "00:00", "10:00", "xzxzxzxzxzxzxzxzxzxzx"));
+            tvShows.Add(new TvShow("Testi", 99, "00:00", "10:00", "zxzxzxzxzxzxzxzxzx"));
 
             try
             {

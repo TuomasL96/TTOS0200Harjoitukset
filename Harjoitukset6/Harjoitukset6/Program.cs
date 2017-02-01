@@ -21,9 +21,9 @@ namespace Harjoitukset6
 
             while (repeat == true)
             {
-                Console.Write("Give a text line ('exit' ends) : ");
+                Console.Write("Give a text line ('0' ends) : ");
                 endLine = Console.ReadLine();
-                if (endLine == "exit") { repeat = false; }
+                if (endLine == "0") { repeat = false; }
                 else
                 {
                     try
