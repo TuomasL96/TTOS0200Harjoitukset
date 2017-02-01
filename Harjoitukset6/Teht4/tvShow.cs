@@ -23,9 +23,10 @@ namespace Teht4
             EndTime = end;
             InfoText = info;
         }
-        public override string ToString()
+
+        public string PrintShow()
         {
-            return Name + ", ch: " + Channel + ", starts: " + StartTime + ", ends:" + EndTime + ", INFO: " + InfoText;
+            return Name + "\nChannel: " + Channel + "\nStarts: " + StartTime + "\nEnds:" + EndTime + "\nINFO: " + InfoText;
         }
     }
 }

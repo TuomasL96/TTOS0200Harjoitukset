@@ -11,37 +11,31 @@ namespace Teht2
     {
         static void Main(string[] args)
         {
-            ReadFile();
+            FileReader();
         }
-        static void ReadFile()
+        static void FileReader()
         {
-            string file = @"d:\temp\nimet.txt";
-            int nameCount = new int();
-
-            try
+            string myFile = @"d:\temp\nimet.txt";
+            if (File.Exists(myFile))
             {
-                var logFile = File.ReadAllLines(file);
-                List<string> list = new List<string>(logFile);
-                var q = list.GroupBy(x => x)
-                        .Select(g => new { Value = g.Key, Count = g.Count() });
-          
-                foreach (var x in q) { nameCount++; }
-                list.Sort();
-
-                Console.WriteLine("Löytyi " + list.Count + " riviä, ja " + nameCount + " nimeä sortattuna:");
-                foreach (var x in q)
+                try
                 {
-                    Console.WriteLine("Nimi " + x.Value + " esiintyy " + x.Count + " kertaa");
+                    List<string> lines = new List<string>(File.ReadAllLines(myFile));
+                    lines.Sort();
+                    var groupedList = lines.GroupBy(x => x) //LINQ juttuja syntaxi varmaan väärä?
+                                        .Select(g => new { Value = g.Key, Count = g.Count() });
+                    Console.WriteLine("Löytyi " + lines.Count + " riviä, ja " + groupedList.Count() + " nimeä sortattuna:");
+                    foreach (var x in groupedList)
+                    {
+                        Console.WriteLine("Nimi " + x.Value + " esiintyy " + x.Count + " kertaa");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
                 }
             }
-            catch (FileNotFoundException)
-            {
-                Console.WriteLine("File not found (FileNotFoundException)");
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Something Went wrong!");
-            }
+            else { Console.WriteLine("File: " + myFile + " does not exist!"); }
         }
     }
 }

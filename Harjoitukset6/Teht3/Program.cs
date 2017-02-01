@@ -11,39 +11,87 @@ namespace Teht3
     {
         static void Main(string[] args)
         {
-            MakeAFile();
+            MakeAFileV2();
         }
-        static void MakeAFile()
+        /// <summary>
+        /// tämä versio tallentaa lopetettaessa kaikki annetut numerot kerralla
+        /// ja kirjoittaa aina tiedostot uusiksi
+        /// </summary>
+        static void MakeAFileV2()
         {
             string number;
-            int i;
-            double f;
-            bool repeat = true;
-            /* 
-            Voisi varmaan tehdä paljon yksinkertaisemmin/paremmin, nyt ohjelma aukoo ja sulkee tiedostot 
-            joka numeron lisäyksen yhteydessä erikseen.
-            */
+            int intValue;
+            double doubleValue;
+            bool isInt, isDouble, repeat = true;
+            List<int> integers = new List<int>();
+            List<double> doubles = new List<double>();
+
             while (repeat == true)
             {
                 Console.Write("Give a number: ");
                 number = Console.ReadLine();
-                bool isInt = int.TryParse(number, out i);
+                isInt = int.TryParse(number, out intValue);
                 if (isInt == true)
                 {
-                    System.IO.StreamWriter outputFile = null;
+                    integers.Add(intValue);
+                }
+                else
+                {
+                    isDouble = double.TryParse(number, out doubleValue);
+                    if (isDouble == true)
+                    {
+                        doubles.Add(doubleValue);
+                    }
+                    else { repeat = false; }
+                }
+            }
+            try
+            {
+                using (StreamWriter intWriter = new StreamWriter(@"d:\temp\T2Integers.txt"))
+                {
+                    foreach (int i in integers)
+                    {
+                        intWriter.WriteLine(i);
+                    }
+                }
+                using (StreamWriter doubleWriter = new StreamWriter(@"d:\temp\T2Doubles.txt"))
+                {
+                    foreach (double d in doubles)
+                    {
+                        doubleWriter.WriteLine(d);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        /// <summary>
+        /// tämä versio avaa ja tallentaa tiedoston perään yksi numero kerrallaan 
+        /// </summary>
+        static void MakeAFile() 
+        {
+            string number;
+            int intValue;
+            double doubleValue;
+            bool isInt, isDouble, repeat = true;
+            while (repeat == true)
+            {
+                Console.Write("Give a number: ");
+                number = Console.ReadLine();
+                isInt = int.TryParse(number, out intValue);
+                if (isInt == true)
+                {
+                    StreamWriter outputFile = null;
                     try
                     {
-                        outputFile = new System.IO.StreamWriter(@"d:\temp\T2Integers.txt", true);
-                        outputFile.WriteLine(i);
-                        outputFile.Close();
+                        outputFile = new StreamWriter(@"d:\temp\T2Integers.txt", true);
+                        outputFile.WriteLine(intValue);
                     }
-                    catch (FileNotFoundException)
+                    catch (Exception ex)
                     {
-                        Console.WriteLine("File not found (FileNotFoundException)");
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine("Some exception happend (Exception)");
+                        Console.WriteLine(ex.Message);
                     }
                     finally
                     {
@@ -55,23 +103,18 @@ namespace Teht3
                 }
                 else
                 {
-                    bool isDouble = double.TryParse(number, out f);
+                    isDouble = double.TryParse(number, out doubleValue);
                     if (isDouble == true)
                     {
-                        System.IO.StreamWriter outputFile = null;
+                        StreamWriter outputFile = null;
                         try
                         {
-                            outputFile = new System.IO.StreamWriter(@"d:\temp\T2Doubles.txt", true);
-                            outputFile.WriteLine(f);
-                            outputFile.Close();
+                            outputFile = new StreamWriter(@"d:\temp\T2Doubles.txt", true);
+                            outputFile.WriteLine(doubleValue);
                         }
-                        catch (FileNotFoundException)
+                        catch (Exception ex)
                         {
-                            Console.WriteLine("File not found (FileNotFoundException)");
-                        }
-                        catch (Exception)
-                        {
-                            Console.WriteLine("Some exception happend (Exception)");
+                            Console.WriteLine(ex.Message);
                         }
                         finally
                         {
