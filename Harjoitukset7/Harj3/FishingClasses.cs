@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Harj3
 {
@@ -40,7 +36,7 @@ namespace Harj3
         }
         public string PrintFishes()
         {
-            string allFishes = "Fisher " + Name + "has the following fishes:\n\n";
+            string allFishes = "Fisher " + Name + " has the following fishes:\n\n";
             foreach (Fish fish in fishes)
             {
                 allFishes = allFishes + fish.ToString() + "\n";

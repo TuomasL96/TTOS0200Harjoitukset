@@ -6,6 +6,10 @@ namespace Harj1
     {
         static void Main(string[] args)
         {
+            TestDice();
+        }
+        static void TestDice()
+        {
             double average;
             int timesRolled, result = 0;
             int count1, count2, count3, count4, count5, count6;

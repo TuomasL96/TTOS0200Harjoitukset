@@ -3,12 +3,7 @@ using System.Security.Cryptography;
 
 namespace Harj1
 {
-    interface iDice
-    {
-        int Roll();
-    }
-
-    class Dice : iDice
+    class Dice
     {
         public int Roll()
         {
