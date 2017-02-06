@@ -66,7 +66,7 @@ namespace Harj3
             return "- species: " + Species + " " + Lenght + " cm " + Weight + " kg\n" + CatchLocation.ToString() + "\n";
         }
     }
-    public class Location
+    public class Location // voisi olla myös vain kalan ominaisuuksina
     {
         public string Place { get; set; }
         public string GeneralArea { get; set; }
