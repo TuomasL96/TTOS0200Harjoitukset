@@ -29,12 +29,12 @@ namespace Harj4
 
         public override double Area()
         {
-            return 3.14 * (Radius * Radius);
+            return 3.14 * (Radius * Radius); // en käytä Math.PI:tä koska olen laiska ja näin ei tarvitse rajata tulostuksen desimaaleja
         }
 
         public override double Circumference()
         {
-            return 2 * 3.14 * Radius;
+            return 2 * 3.14 * Radius; // en käytä Math.PI:tä koska olen laiska ja näin ei tarvitse rajata tulostuksen desimaaleja
         }
 
         public override string ToString()
