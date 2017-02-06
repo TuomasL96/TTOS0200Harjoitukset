@@ -6,7 +6,6 @@ namespace Harj5
     {
         public static double Sum(double[] array)
         {
-
             double sum = 0;
             foreach (double d in array)
             {
@@ -17,13 +16,11 @@ namespace Harj5
 
         public static double Average(double[] array)
         {
-
             return Sum(array) / array.Length;
         }
 
         public static double Min(double[] array)
         {
-
             return array.Min();
         }
 

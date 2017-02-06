@@ -29,6 +29,7 @@ namespace Harj5.Tests
                 sum = sum + d;
             }
             expected = sum / array.Length;
+            // expected = array.Average ei toimi tyhjällä taulukolla
             actual = ArrayCalcs.Average(array);
             Assert.AreEqual(expected, actual);
         }
